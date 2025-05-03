@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "com.gracefulsoul.grpc.lib.proto";
+option java_outer_classname = "HelloProto";
+
+service Hello {
+    rpc SayHello (Request) returns (Reply) {}
+    rpc StreamHello(Request) returns (stream Reply) {}
+}
+
+message Request {
+    string name = 1;
+}
+
+message Reply {
+    string message = 1;
+}

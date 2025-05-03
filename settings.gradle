@@ -1,0 +1,16 @@
+pluginManagement {
+	repositories {
+		maven {
+			url 'https://repo.spring.io/milestone'
+		}
+		maven {
+			url 'https://repo.spring.io/snapshot'
+		}
+		gradlePluginPortal()
+	}
+}
+
+include 'grpc-server'
+include 'grpc-client'
+
+rootProject.name = 'spring-grpc'
